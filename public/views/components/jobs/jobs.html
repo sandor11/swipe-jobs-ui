@@ -1,0 +1,58 @@
+<div class="bg-secondary">
+    <div class="container-fluid p-v-10">
+        <div class="inline-block bg-secondary-alpha-overlay p-v-5 p-h-10">
+            <span class="c-white fs-20 font-light">Jobs Available</span>
+        </div>
+    </div>
+</div>
+<div class="bg-lightgray p-t-5 p-b-15">
+    <div class="container-fluid">
+        <div class="card bg-off-white border-radius-default box-shadow-1">
+            <div class="card-body card-body-no-padding">
+                <div class="p-10 box-shadow-1">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <img ng-src="{{job.company.logo}}" class="width-100"" />
+                        </div>
+                        <div class="col-xs-8 line-height-1">
+                            <div class="m-0 font-medium fs-14">{{job.title}}</div>
+                            <div class="m-0 font-light fs-14 text-uppercase c-midgray m-t-5">{{job.company.name}}</div>
+                            <div class="m-0 font-light fs-14 c-midgray">{{job.wagePerHourInCents / 100 | currency}}/hour</div>
+                            <div class="m-0 font-medium fs-14 c-midgray m-t-5">{{job.shifts | shiftRange}}</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="m-t-10">
+                        <p class="font-bold c-darkgray">If you take this job you are agreeing to work <span class="text-uppercase">ALL DAYS</span>.</p>
+                    </div>                
+                    <div class="m-t-5">
+                        <div ng-repeat="shift in job.shifts">
+                            <div class="row c-gray">
+                                <div class="col-xs-6">{{shift | shiftStartDay}}</div>
+                                <div class="col-xs-6 text-right">{{shift | shiftStartTime}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-10 box-shadow-1">
+                    <h5>Location</h5>
+                    <a href="http://maps.google.com/?q={{job.company.address}}" class="a-secondary font-medium"><i class="fa fa-fw fa-map"></i> {{job.company.address}}</a>
+                </div>
+                
+                <div class="p-10 box-shadow-1">
+                    <h5>Branch</h5>
+                    <h5>{{job.branch}}</h5>
+                    <a href="tel:{{job.branchPhoneNumber}}" class="a-secondary font-medium"><i class="fa fa-fw fa-phone"></i> {{job.branchPhoneNumber}}</a>
+                </div>
+
+                <div class="p-10 p-t-30 box-shadow-1">
+                    <div class="row c-gray">
+                        <div class="col-xs-6"><button class="btn btn-link c-secondary text-uppercase font-bold">No Thanks</button></div>
+                        <div class="col-xs-6 text-right"><button class="btn btn-link c-secondary text-uppercase font-bold">I'll Take It</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

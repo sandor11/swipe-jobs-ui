@@ -1,0 +1,37 @@
+// foreground colors
+.c-primary {color: @app-primary !important;}
+.c-secondary {color:@app-secondary !important;}
+.c-accent {color:@app-accent !important;}
+.c-white {color: #fff !important;}
+.c-off-white {color: @off-white !important;}
+.c-lightgray {color:@lightgray !important;}
+.c-midgray {color:@midgray !important;}
+.c-gray {color:@gray !important;}
+.c-darkgray {color:@darkgray !important;}
+
+
+// background colors 
+.bg-primary {background-color:@app-primary !important;}
+.bg-primary-light {background-color:lighten(@app-primary, 22%) !important;}
+.bg-secondary {background-color:@app-secondary !important;}
+.bg-accent {background-color:@app-accent !important;}
+.bg-white {background-color: #fff !important;}
+.bg-off-white {background-color: @off-white !important;}
+.bg-lightgray {background-color:@lightgray !important;}
+.bg-midgray {background-color:@midgray !important;}
+.bg-gray {background-color:@gray !important;}
+.bg-darkgray {background-color:@darkgray !important;}
+
+// background colors with alpha
+.bg-primary-alpha {background-color:fade(@app-primary, @bg-opacity-percentage);}
+.bg-secondary-alpha {background-color:fade(@app-secondary, @bg-opacity-percentage);}
+.bg-secondary-alpha-overlay {background-color:fade(darken(@app-secondary, 15%), @bg-opacity-percentage);}
+.bg-accent-alpha {background-color:fade(@app-accent, @bg-opacity-percentage);}
+.bg-gray-alpha {background-color:fade(@gray, @bg-opacity-percentage);}
+.bg-white-alpha {background-color:rgba(255,255,255,@bg-opacity);}
+.bg-lightgray-alpha {background-color:fade(@lightgray, @bg-opacity-percentage);}
+.bg-midgray-alpha {background-color:fade(@midgray, @bg-opacity-percentage);}
+.bg-darkgray-alpha {background-color:fade(@darkgray, @bg-opacity-percentage);}
+                     
+// bootstrap default colors
+.c-info {color:#31708f;}
